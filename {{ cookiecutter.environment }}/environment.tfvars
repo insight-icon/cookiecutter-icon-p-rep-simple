@@ -10,7 +10,7 @@
 //environment = "prod"
 
 log_bucket_region = "us-east-1"
-environment = "{{ cookiecutter.EMVIRONMENT }}"
-node_subdomain = "{{ cookiecutter.EMVIRONMENT }}"
-stage = "{{ cookiecutter.EMVIRONMENT }}"
+environment = "{{ cookiecutter.ENVIRONMENT }}"
+node_subdomain = "{{ cookiecutter.ENVIRONMENT }}"
+stage = "{{ cookiecutter.ENVIRONMENT }}"
 

@@ -13,7 +13,7 @@ subdomain = "{{ cookiecutter.ACCOUNT_ID }}"
 
 domain_name = "{{ cookiecutter.ACCOUNT_ID }}"
 
-stage = "{{ cookiecutter.EMVIRONMENT }}"
+stage = "{{ cookiecutter.ENVIRONMENT }}"
 
 corporate_ip = "{{ cookiecutter.CORPORATE_IP }}"
 allowed_cidr = [
