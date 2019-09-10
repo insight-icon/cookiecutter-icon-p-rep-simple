@@ -1,6 +1,6 @@
 {
-  "ENVIRONMENT": "prod",
-  "REGION": "us-east-1",
+  "environment": "prod",
+  "region": "us-east-1",
   "ACCOUNT_ID": "123456789012",
   "LOCAL_KEY_FILE": "~/.ssh/id_rsa.pub",
   "LOCAL_PRIVATE_KEY_FILE": "~/.ssh/id_rsa",

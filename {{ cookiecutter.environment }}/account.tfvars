@@ -1,7 +1,7 @@
 account_id = "{{ cookiecutter.ACCOUNT_ID }}"
 aws_allowed_account_ids = [
   "{{ cookiecutter.ACCOUNT_ID }}"]
-terraform_state_region = "{{ cookiecutter.REMOTE_STATE_REGION }}"
+terraform_state_region = "us-east-1"
 terraform_state_bucket = "terraform-states-{{ cookiecutter.ACCOUNT_ID }}"
 
 local_public_key = "{{ cookiecutter.LOCAL_KEY_FILE }}"
@@ -13,7 +13,7 @@ subdomain = "{{ cookiecutter.ACCOUNT_ID }}"
 
 domain_name = "{{ cookiecutter.ACCOUNT_ID }}"
 
-stage = "{{ cookiecutter.ENVIRONMENT }}"
+stage = "{{ cookiecutter.environment }}"
 
 corporate_ip = "{{ cookiecutter.CORPORATE_IP }}"
 allowed_cidr = [
