@@ -1,7 +1,7 @@
 terraform {
 //  source = "github.com/${local.repo_owner}/${local.repo_name}.git?ref=0.1.0"
-//  source = "github.com/${local.repo_owner}/${local.repo_name}.git//node"
-  source = "../../../../../modules/${local.repo_name}//node"
+  source = "github.com/${local.repo_owner}/${local.repo_name}.git//node"
+//  source = "../../../../../modules/${local.repo_name}//node"
 }
 
 // TODO ^^^ Be careful of folder ref
