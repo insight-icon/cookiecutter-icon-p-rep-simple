@@ -6,18 +6,18 @@ export TF_PLUGIN_CACHE_DIR=~/.terraform.d/plugin-cache
 export TF_INPUT=0
 
 DIRECTORIES=( \
-"us-east-1/citizen/ec2" \
-"us-east-1/citizen/sg" \
-"us-east-1/citizen/keys" \
-"us-east-1/p-rep/ec2" \
-"us-east-1/p-rep/sg" \
-"us-east-1/p-rep/keys" \
-"us-east-1/network/vpc" \
+"{{ cookiecutter.region }}/citizen/ec2" \
+"{{ cookiecutter.region }}/citizen/sg" \
+"{{ cookiecutter.region }}/citizen/keys" \
+"{{ cookiecutter.region }}/p-rep/ec2" \
+"{{ cookiecutter.region }}/p-rep/sg" \
+"{{ cookiecutter.region }}/p-rep/keys" \
+"{{ cookiecutter.region }}/network/vpc" \
 "global/audit/s3-cloudtrail" \
 "global/audit/cloudtrail" \
 "global/profiles/citizen" \
 "global/profiles/p-rep" \
-"us-east-1/logging/log-config-bucket" \
+"{{ cookiecutter.region }}/logging/log-config-bucket" \
 )
 
 for i in "${DIRECTORIES[@]}"
@@ -25,9 +25,9 @@ do
    terragrunt destroy --terragrunt-source-update --terragrunt-non-interactive --terragrunt-working-dir $i
 done
 
-#terragrunt destroy --terragrunt-source-update --terragrunt-non-interactive --terragrunt-working-dir us-east-1/citizen
-#terragrunt destroy-all --terragrunt-source-update --terragrunt-non-interactive --terragrunt-working-dir us-east-1/p-rep
-#terragrunt destroy-all --terragrunt-source-update --terragrunt-non-interactive --terragrunt-working-dir us-east-1/logging
-#terragrunt destroy-all --terragrunt-source-update --terragrunt-non-interactive --terragrunt-working-dir us-east-1/network
+#terragrunt destroy --terragrunt-source-update --terragrunt-non-interactive --terragrunt-working-dir {{ cookiecutter.region }}/citizen
+#terragrunt destroy-all --terragrunt-source-update --terragrunt-non-interactive --terragrunt-working-dir {{ cookiecutter.region }}/p-rep
+#terragrunt destroy-all --terragrunt-source-update --terragrunt-non-interactive --terragrunt-working-dir {{ cookiecutter.region }}/logging
+#terragrunt destroy-all --terragrunt-source-update --terragrunt-non-interactive --terragrunt-working-dir {{ cookiecutter.region }}/network
 #terragrunt destroy-all --terragrunt-source-update --terragrunt-non-interactive --terragrunt-working-dir global
 
