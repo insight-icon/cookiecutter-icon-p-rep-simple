@@ -10,14 +10,14 @@ export TF_INPUT=0
 ##"global/profiles/citizen" \
 ##"global/audit/cloudtrail" \
 ##"global/audit/s3-cloudtrail" \
-##"us-east-1/logging/log-config-bucket" \
-##"us-east-1/p-rep/keys" \
-##"us-east-1/p-rep/sg" \
-##"us-east-1/p-rep/ec2" \
-##"us-east-1/network/vpc" \
-##"us-east-1/citizen/keys" \
-##"us-east-1/citizen/sg" \
-##"us-east-1/citizen/ec2" \
+##"{{ cookiecutter.region }}/logging/log-config-bucket" \
+##"{{ cookiecutter.region }}/p-rep/keys" \
+##"{{ cookiecutter.region }}/p-rep/sg" \
+##"{{ cookiecutter.region }}/p-rep/ec2" \
+##"{{ cookiecutter.region }}/network/vpc" \
+##"{{ cookiecutter.region }}/citizen/keys" \
+##"{{ cookiecutter.region }}/citizen/sg" \
+##"{{ cookiecutter.region }}/citizen/ec2" \
 ##)
 #
 #DIRECTORIES=( \
@@ -31,10 +31,10 @@ export TF_INPUT=0
 #done
 
 ## TODO: Turning into array + loop - doesn't work as well as this does
-terragrunt apply-all --terragrunt-source-update --terragrunt-non-interactive --terragrunt-working-dir us-east-1/network
-terragrunt apply-all --terragrunt-source-update --terragrunt-non-interactive --terragrunt-working-dir us-east-1/logging
+terragrunt apply-all --terragrunt-source-update --terragrunt-non-interactive --terragrunt-working-dir {{ cookiecutter.region }}/network
+terragrunt apply-all --terragrunt-source-update --terragrunt-non-interactive --terragrunt-working-dir {{ cookiecutter.region }}/logging
 terragrunt apply-all --terragrunt-source-update --terragrunt-non-interactive --terragrunt-working-dir global
-terragrunt apply-all --terragrunt-source-update --terragrunt-non-interactive --terragrunt-working-dir us-east-1/citizen
-terragrunt apply-all --terragrunt-source-update --terragrunt-non-interactive --terragrunt-working-dir us-east-1/p-rep
+terragrunt apply-all --terragrunt-source-update --terragrunt-non-interactive --terragrunt-working-dir {{ cookiecutter.region }}/citizen
+terragrunt apply-all --terragrunt-source-update --terragrunt-non-interactive --terragrunt-working-dir {{ cookiecutter.region }}/p-rep
 
 
