@@ -1,0 +1,11 @@
+{
+  "ENVIRONMENT": "prod",
+  "REGION": "us-east-1",
+  "ACCOUNT_ID": "123456789012",
+  "LOCAL_KEY_FILE": "~/.ssh/id_rsa.pub",
+  "LOCAL_PRIVATE_KEY_FILE": "~/.ssh/id_rsa",
+  "ROOT_DOMAIN_NAME": "insight-icon.net",
+  "SUBDOMAIN": "prod",
+  "CORPORATE_IP": "1.2.3.4",
+  "ZONE_ID": "Z1234567890ABC"
+}
