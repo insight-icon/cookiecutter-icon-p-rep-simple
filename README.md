@@ -12,6 +12,7 @@ This is a helper utility to automatically generate the neccesary files you need 
 - Export these keys 
     - AWS_ACCESS_KEY_ID – Specifies an AWS access key associated with an IAM user or role.
     - AWS_SECRET_ACCESS_KEY – Specifies the secret key associated with the access key. This is essentially the "password" for the access key.
+    - If you are using keys with aws profile, export the profile - `export AWS_PROFILE=profile`
 - Install terrform and terragrunt - tfswitch + tgswitch are the best tools 
 - Run `cd <env> && chmod +x apply.sh && ./apply.sh`
     - Might need to nudge it along by running terragrunt from within the directories
