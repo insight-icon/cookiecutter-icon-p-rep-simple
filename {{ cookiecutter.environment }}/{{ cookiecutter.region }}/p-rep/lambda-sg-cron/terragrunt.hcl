@@ -28,6 +28,7 @@ inputs = {
   security_group_ids = dependency.sg.outputs.security_group_ids
   subnet_ids = dependency.vpc.outputs.private_subnets
 
+//  terraform_state_region = "us-east-1"
   terraform_state_bucket = "terraform-states-${get_aws_account_id()}"
   lock_table = "terraform-locks-${get_aws_account_id()}"
   key = format("%s/lambda-sg/terraform.tfstate", path_relative_to_include())
