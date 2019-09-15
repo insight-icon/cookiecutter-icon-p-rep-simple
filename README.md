@@ -34,7 +34,7 @@ cookiecutter --config-file=context.yaml https://github.com/robc-io/cookiecutter-
 ```yaml
 default_context:
     environment: "dev"
-    region: "us-east-2"
+    region: "us-east-1"
     ACCOUNT_ID: "987654321012"
     LOCAL_KEY_FILE: "full/path/to/.ssh/id_rsa.pub"
     LOCAL_PRIVATE_KEY_FILE: "full/path/to/.ssh/id_rsa"
