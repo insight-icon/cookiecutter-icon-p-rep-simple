@@ -51,3 +51,15 @@ To suppress input run with additional flag `--no-input` flag:
 ```bash
 cookiecutter --config-file=context.yaml https://github.com/robc-io/cookiecutter-icon-p-rep-simple --no-input
 ```
+
+
+### Notes
+
+- Places where hard-codes exist 
+    - logging bucket - ok 
+    - global reference 
+        - Need to deal with this somehow
+        - This is best practice to put IAM and other globally scoped resources in their own folder
+        - This obviously is going to cause a lot of issues 
+        
+        

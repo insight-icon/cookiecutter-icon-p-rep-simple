@@ -11,14 +11,8 @@ locals {
   repo_name = "terraform-aws-icon-iam"
 }
 
-//terraform {
-////  source = "github.com/robc-io/terraform-aws-icon-iam//node.git?ref=v0.0.1"
-////  source = "github.com/robc-io/terraform-aws-icon-iam.git//node"
-//  source = "../../../../../modules/"
-//}
-
 dependency "log_config_bucket" {
-  config_path = "../../../us-east-1/logging/log-config-bucket"
+  config_path = "../../../{{ cookiecutter.region }}/logging/log-config-bucket"
 }
 
 include {
