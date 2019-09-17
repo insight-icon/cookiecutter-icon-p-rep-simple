@@ -22,7 +22,9 @@ This is a helper utility to automatically generate the neccesary files you need 
 ## Applying 
 
 - Run `cd <env> && chmod +x apply.sh && ./apply.sh`
-    - Might need to nudge it along by running terragrunt from within the directories
+    - Might need to nudge it along by running terragrunt from within the directories or running apply twice
+    - Sometimes there are errors with the content delivery system and various API calls 
+    - 
 - Run `chmod +x destroy.sh && ./destroy.sh` to destroy the resources 
 
 ### Saving Config Values 
@@ -52,7 +54,6 @@ To suppress input run with additional flag `--no-input` flag:
 cookiecutter --config-file=context.yaml https://github.com/robc-io/cookiecutter-icon-p-rep-simple --no-input
 ```
 
-
 ### Notes
 
 - Places where hard-codes exist 
@@ -61,5 +62,4 @@ cookiecutter --config-file=context.yaml https://github.com/robc-io/cookiecutter-
         - Need to deal with this somehow
         - This is best practice to put IAM and other globally scoped resources in their own folder
         - This obviously is going to cause a lot of issues 
-        
         
