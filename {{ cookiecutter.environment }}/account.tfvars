@@ -5,7 +5,6 @@ terraform_state_region = "us-east-1"
 terraform_state_bucket = "terraform-states-{{ cookiecutter.ACCOUNT_ID }}"
 
 local_public_key = "{{ cookiecutter.LOCAL_KEY_FILE }}"
-private_key = "{{ cookiecutter.LOCAL_PRIVATE_KEY_FILE }}"
 
 root_domain_name = "{{ cookiecutter.ROOT_DOMAIN_NAME }}"
 
