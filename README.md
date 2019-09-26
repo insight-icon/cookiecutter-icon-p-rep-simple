@@ -6,9 +6,18 @@ This is a helper utility to automatically generate the neccesary files you need 
 
 ## Prerequisites
 
-- Cookiecutter - `pip install cookiecutter`
-- jq - https://stedolan.github.io/jq/download/
-- Terraform and Terragrunt (might we suggest [tfswitch](https://warrensbox.github.io/terraform-switcher/) and [tgswitch](https://github.com/warrensbox/tgswitch))
+- Cookiecutter 
+    - `pip install cookiecutter`
+- Ansible 
+    - `pip install ansible`
+- Terraform 
+    - We suggest using [tfswitch](https://warrensbox.github.io/terraform-switcher/) 
+        - Requires installing Go
+    - Otherwise here are some options 
+- Terragrunt
+    - We suggest using [tgswitch](https://github.com/warrensbox/tgswitch))
+    - Install from [source](https://github.com/gruntwork-io/terragrunt) 
+    
 
 ## Preparation
 - Run `cookiecutter https://github.com/robc-io/cookiecutter-icon-p-rep-simple`
@@ -33,17 +42,30 @@ This is a helper utility to automatically generate the neccesary files you need 
 cookiecutter --config-file=context.yaml https://github.com/robc-io/cookiecutter-icon-p-rep-simple
 ```
 
+```json
+{
+  "environment": "prod",
+  "region": "us-east-1",
+  "account_id": "123456789012",
+  "corporate_ip": "1.2.3.4 - google what is my ipv4. Do this from your home / office on stable IP",
+  "local_public_key": "absolute path to ssh key ie. /home/ubuntu/.ssh/id_rsa.pub",
+  "local_private_key": "absolute path to ssh key ie. /home/ubuntu/.ssh/id_rsa",
+  "keystore_path": "absolute path to keystore",
+  "keystore_password": "This needs to change"
+}
+```
+
+
 ```yaml
 default_context:
     environment: "dev"
     region: "us-east-1"
-    ACCOUNT_ID: "987654321012"
-    LOCAL_KEY_FILE: "full/path/to/.ssh/id_rsa.pub"
-    LOCAL_PRIVATE_KEY_FILE: "full/path/to/.ssh/id_rsa"
-    ROOT_DOMAIN_NAME: "insight-icon.net"
-    SUBDOMAIN: "prod"
-    CORPORATE_IP: "1.2.3.4"
-    ZONE_ID: "Z1234567890ABC"
+    account_id: "987654321012"
+    corporate_ip: "1.2.3.4"
+    local_public_key: "full/path/to/.ssh/id_rsa.pub"
+    local_private_key: "full/path/to/.ssh/id_rsa"
+    keystore_path: "full/path/to/keystore"
+    keystore_password: "scarystuff"
 ```
 
 This will fill in default prompts:

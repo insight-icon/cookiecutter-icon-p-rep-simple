@@ -1,10 +1,10 @@
 {
   "environment": "prod",
   "region": "us-east-1",
-  "ACCOUNT_ID": "123456789012",
-  "LOCAL_KEY_FILE": "absolute path to ssh key ie. /home/ubuntu/.ssh/id_rsa.pub",
-  "ROOT_DOMAIN_NAME": "insight-icon.net",
-  "SUBDOMAIN": "prod",
-  "CORPORATE_IP": "1.2.3.4",
-  "ZONE_ID": "Z1234567890ABC"
+  "account_id": "123456789012",
+  "corporate_ip": "1.2.3.4 - google what is my ipv4. Do this from your home / office on stable IP",
+  "local_public_key": "absolute path to ssh key ie. /home/ubuntu/.ssh/id_rsa.pub",
+  "local_private_key": "absolute path to ssh key ie. /home/ubuntu/.ssh/id_rsa",
+  "keystore_path": "absolute path to keystore",
+  "keystore_password": "This needs to change"
 }
