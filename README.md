@@ -15,10 +15,23 @@ Requires AWS account with proper permissions.
     - We suggest using [tfswitch](https://warrensbox.github.io/terraform-switcher/) 
         - Requires installing Go
     - Otherwise here are some options 
+        - Windows
+            - Install [chocolatey](https://chocolatey.org/docs/installation)
+            - From command prompt run `choco install terraform`
+        - Mac 
+            - Install [brew](https://brew.sh/)
+            - `brew install terraform`
+        - Linux
+            - Figure it out
 - Terragrunt
     - We suggest using [tgswitch](https://github.com/warrensbox/tgswitch))
     - Install from [source](https://github.com/gruntwork-io/terragrunt) 
-    
+    - Install 
+        - Windows 
+            - `choco install terragrunt`
+        - Mac 
+            - `brew install terragrunt`
+        
 
 ## Preparation
 - Run `cookiecutter https://github.com/robc-io/cookiecutter-icon-p-rep-simple`
