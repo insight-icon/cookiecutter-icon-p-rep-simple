@@ -1,8 +1,9 @@
 # cookiecutter-icon-p-rep-simple
 
-This is a helper utility to automatically generate the neccesary files you need to run a `one-click` deployment
- of a P-Rep node for the ICON Blockchain.  Users can simply rerun this template and expect changes to happen 
- automatically on their account based on the updated template.   
+Scaffolding tool to automatically generate the neccesary files you need to run a `one-click` deployment
+ of a P-Rep and Citizen nodes for the ICON Blockchain.  
+ 
+Requires AWS account with proper permissions.  
 
 ## Prerequisites
 
@@ -33,28 +34,11 @@ This is a helper utility to automatically generate the neccesary files you need 
 - Run `cd <env> && chmod +x apply.sh && ./apply.sh`
     - Might need to nudge it along by running terragrunt from within the directories or running apply twice
     - Sometimes there are errors with the content delivery system and various API calls 
-    - 
 - Run `chmod +x destroy.sh && ./destroy.sh` to destroy the resources 
 
 ### Saving Config Values 
 
-```bash
-cookiecutter --config-file=context.yaml https://github.com/robc-io/cookiecutter-icon-p-rep-simple
-```
-
-```json
-{
-  "environment": "prod",
-  "region": "us-east-1",
-  "account_id": "123456789012",
-  "corporate_ip": "1.2.3.4 - google what is my ipv4. Do this from your home / office on stable IP",
-  "local_public_key": "absolute path to ssh key ie. /home/ubuntu/.ssh/id_rsa.pub",
-  "local_private_key": "absolute path to ssh key ie. /home/ubuntu/.ssh/id_rsa",
-  "keystore_path": "absolute path to keystore",
-  "keystore_password": "This needs to change"
-}
-```
-
+It can be easier to set defaults in a yaml configuration file like this, 
 
 ```yaml
 default_context:
@@ -68,7 +52,11 @@ default_context:
     keystore_password: "scarystuff"
 ```
 
-This will fill in default prompts:
+Then you just need to run cookiecutter like so,
+
+```bash
+cookiecutter --config-file=context.yaml https://github.com/robc-io/cookiecutter-icon-p-rep-simple
+```
 
 To suppress input run with additional flag `--no-input` flag:
 
